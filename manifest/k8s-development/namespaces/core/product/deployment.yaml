@@ -20,7 +20,7 @@ spec:
             memory: "128Mi"
             cpu: "100m"
           requests:
-            memoru: 10Mi
+            memory: 10Mi
             cpu: 10m
         ports:
         - containerPort: 80
