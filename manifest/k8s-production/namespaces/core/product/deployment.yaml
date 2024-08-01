@@ -11,6 +11,10 @@ spec:
       labels:
         app: product
     spec:
+      volumes:
+      - name: env
+        secret:
+          secretName: env
       containers:
       - name: product
         image: nginx:alpine
@@ -23,3 +27,7 @@ spec:
             cpu: 10m
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: env
+          mountPath: /config/files
+          subPath: .env

@@ -6,3 +6,10 @@ resources:
   - services.yaml
   - hpa.yaml
   # - ingress.yaml
+
+generatorOptions:
+  disableNameSuffixHash: true
+secretGenerator:
+  - name: env
+    files:
+      - .env
