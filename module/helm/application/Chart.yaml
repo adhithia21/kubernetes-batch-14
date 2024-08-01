@@ -1,0 +1,4 @@
+apiVersion: v2
+name: application
+version: "1.0"
+description: ini charts untuk aplikasi
