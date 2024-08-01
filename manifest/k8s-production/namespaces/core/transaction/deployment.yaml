@@ -16,10 +16,10 @@ spec:
         image: kennethreitz/httpbin
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "100m"
+            memory: "500Mi"
+            cpu: "500m"
           requests:
-            memory: 10Mi
-            cpu: 10m
+            memory: 100Mi
+            cpu: 100m
         ports:
         - containerPort: 80
