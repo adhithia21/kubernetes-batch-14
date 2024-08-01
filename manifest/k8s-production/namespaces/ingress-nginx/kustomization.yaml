@@ -5,3 +5,4 @@ namespace: ingress-nginx
 resources:
   - namespace.yaml
   - ../../../../module/helm/ingress-nginx/helm-repository.yaml
+  - release.yaml
