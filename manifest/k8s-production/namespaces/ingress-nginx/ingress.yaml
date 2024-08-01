@@ -6,6 +6,14 @@ spec:
   type: ExternalName
   externalName: product.core.svc
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: transaction
+spec:
+  type: ExternalName
+  externalName: transaction.core.svc
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -18,6 +26,28 @@ spec:
   ingressClassName: nginx
   rules:
   - host: product.jagodevops.online
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: product
+            port: 
+              number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: transaction
+  labels:
+    name: transaction
+  # annotations:
+  #   nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: transaction.jagodevops.online
     http:
       paths:
       - pathType: Prefix
