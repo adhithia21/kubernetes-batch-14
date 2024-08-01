@@ -4,6 +4,8 @@ metadata:
   name: product
   labels:
     name: product
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
