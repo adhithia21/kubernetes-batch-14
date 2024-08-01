@@ -29,5 +29,5 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: env
-          mountPath: /config/files
+          mountPath: /config/files/.env
           subPath: .env
