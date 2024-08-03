@@ -8,3 +8,4 @@ resources:
   - transaction
   - payment
   - backoffice
+  - users

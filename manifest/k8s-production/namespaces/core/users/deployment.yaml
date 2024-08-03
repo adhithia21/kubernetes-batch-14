@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users
+spec:
+  selector:
+    matchLabels:
+      app: users
+  template:
+    metadata:
+      labels:
+        app: users
+    spec:
+      containers:
+      - name: users
+        image: adhithia21/myapp-go:13
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+          requests:
+            memory: 50Mi
+            cpu: 50m
+        ports:
+        - containerPort: 3000

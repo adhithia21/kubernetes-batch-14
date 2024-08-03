@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: users
+  labels:
+    name: users
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: users.jagodevops.online
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: users
+            port: 
+              number: 80
