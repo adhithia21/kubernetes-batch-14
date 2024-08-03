@@ -11,6 +11,8 @@ spec:
       labels:
         app: users
     spec:
+      imagePullSecrets:
+      - name: regcred
       containers:
       - name: users
         image: adhithia21/myapp-go:13
