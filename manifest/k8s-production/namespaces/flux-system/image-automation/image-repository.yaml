@@ -6,3 +6,5 @@ metadata:
 spec:
   image: adhithia21/myapp-go
   interval: 5m
+  secretRef:
+    name: regcred
